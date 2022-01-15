@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="description" content="Unserviced Domain">
+
+    <meta http-equiv="Title" content="Domain Error">
+    <meta http-equiv="Subject" content="Unserviced Domain">
+    <meta http-equiv="Publisher" content="apwlq">
+
+    <meta name="twitter:title" content="Domain Error">
+    <meta name="twitter:description" content="Unserviced Domain">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Domain Error">
+    <meta property="og:description" content="Unserviced Domain">
+
+    <meta name="theme-color" content="#f57b51">
+    <meta name="author" content="apwlq">
+
+    <title>Document</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR');
+    
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif !important;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+        }
+    
+        html, body {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            overflow: hidden;
+            background: #121212;
+            color: #eee;
+            text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        }
+    
+        a {
+            text-decoration: none;
+            pointer-events: all;
+            font-weight: bold;
+            color: #ccc;
+        }
+        a:hover {color: #eee;}
+        a:active {color: #fff;}
+    
+        #background {
+            position: fixed;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            filter: blur(20px);
+            transform: scale(1.1);
+            background-image: url(//raw.githubusercontent.com/apwlq/DomainErrorPage/main/assets/background.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.5;
+        }
+    
+        #background::after {
+            content: '';
+            position: fixed;
+            z-index: 20;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    
+        #main {
+            position: fixed;
+            z-index: 100;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 80px);
+            max-width: 1200px;
+            height: calc(100% - 80px);
+            max-height: 800px;
+        }
+    
+        #header {
+            font-family: 'Noto Sans KR', sans-serif;
+            position: absolute;
+            z-index: 110;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            pointer-events: none;
+        }
+    
+        #title {
+            font-size: 50px;
+            font-weight: bolder;
+            line-height: 80%;
+            color: #fff;
+        }
+    
+        #content {
+            font-size: 40px;
+            color: #ccc;
+        }
+    
+        #footer {
+            z-index: 90;
+            bottom: 0;
+            right: 50%;
+            flex-direction: column;
+            align-items: flex-end;
+            pointer-events: none;
+        }
+    
+        #copyright {
+            color: #ccc;
+            font-family: 'Nanum Gothic Coding', sans-serif;
+            position: absolute;
+            z-index: 90;
+            bottom: 0;
+            right: 0;
+            flex-direction: column;
+            align-items: flex-end;
+            pointer-events: none;
+        }
+    
+        @media (max-width:700px) {
+    
+            html,
+            body {
+                font-size: 4vw;
+            }
+    
+            #main {
+                width: calc(100% - 10vw);
+                max-width: none;
+                height: calc(100% - 14vw);
+                max-height: none;
+            }
+    
+            #header {
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+                align-items: flex-end;
+            }
+    
+            #header #title {
+                font-size: 10vw;
+            }
+    
+            #header #content {
+                font-size: 8vw;
+            }
+        }
+    </style>
+
+    
+</head>
+<body><div id="background"></div>
+    <div id="main">
+        <div id="header">
+            <div id="title">Domain Error</div>
+            <div id="content">Unserviced Domain</div>
+        </div>
+        <div id="footer" class="row align-items-end">
+            <p id="copyright" class="text-center">Copyright ⓒ 2022 <a class="bi bi-github" href="https://github.com/apwlq"> apwlq</a>  All rights reserved.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
